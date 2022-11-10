@@ -9,7 +9,7 @@ const Header = () => {
         <Link to='/services'>Services</Link>
         <Link to='/blog'>Blog</Link>
         <Link to='/contact'>Contact</Link>
-        <Link to='/login'>Login</Link>
+        {/* <Link to='/login'>Login</Link> */}
     </li>
     </>
     return (
@@ -36,7 +36,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link className=""><button className="btn btn-outline mx-2 text-orange-500 hover:bg-orange-500 hover:text-orange-50 hover:border-orange-500">Appoinment</button></Link>
+          <Link className=""><button className="btn btn-outline mx-2 text-cyan-500 hover:bg-cyan-500 hover:text-cyan-50 hover:border-cyan-500">Login</button></Link>
 {/*           <div>
           {
                user?.photoURL && <img className='rounded-full w-8 h-8 flex' src={user.photoURL} alt="" /> 
