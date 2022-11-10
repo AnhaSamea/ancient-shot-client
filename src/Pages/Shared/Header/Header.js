@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import alogo from '../../../assets/logo1.png'
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 const Header = () => {
+
+  const {user,logOut} = useContext(AuthContext);
+  const handleSignOut = ()=>{
+    logOut()
+    .then(()=>{})
+    .catch(err=>console.log(err))
+  }
+
     const menuItems = <>
     <li>
         <Link to='/'>Home</Link>
@@ -36,8 +45,8 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link className=""><button className="btn btn-outline mx-2 text-cyan-500 hover:bg-cyan-500 hover:text-cyan-50 hover:border-cyan-500">Login</button></Link>
-{/*           <div>
+          
+          <div>
           {
                user?.photoURL && <img className='rounded-full w-8 h-8 flex' src={user.photoURL} alt="" /> 
             }
@@ -48,9 +57,9 @@ const Header = () => {
               user?.uid ?
               <button onClick={handleSignOut} className="btn btn-outline text-orange-50 bg-orange-500 hover:bg-orange-50 hover:text-orange-500 hover:border-orange-500">Logout</button>
                       :
-              <Link to='/login'><button className="btn btn-outline text-orange-500 hover:bg-orange-500 hover:text-orange-50 hover:border-orange-500">Login</button></Link>
+                      <Link to='/login' className=""><button className="btn btn-outline mx-2 text-cyan-500 hover:bg-cyan-500 hover:text-cyan-50 hover:border-cyan-500">Login</button></Link>
             }
-          </div> */}
+          </div>
         </div>
       </div>
     );
