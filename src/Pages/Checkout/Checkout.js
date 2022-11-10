@@ -7,6 +7,8 @@ const Checkout = () => {
     const service = useLoaderData();
     // const{img,name,details} = service;
     return (
+        <div>
+            <h1 className="card-title text-start text-3xl font-bold py-5 px-2">{service.title}</h1>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         <div className="card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
@@ -61,6 +63,7 @@ const Checkout = () => {
         </div>
         </div>
     </div>
+</div>
     );
 };
 
