@@ -1,11 +1,11 @@
 import React from 'react';
 
-const PrivateRoute = () => {
+const Footer = () => {
     return (
         <div>
-            
+            <h2>copyright 2022</h2>
         </div>
     );
 };
 
-export default PrivateRoute;
+export default Footer;

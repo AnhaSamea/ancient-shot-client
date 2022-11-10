@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = () => {
+const Services = () => {
     return (
         <div>
             <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam nobis aperiam harum culpa laborum debitis doloribus sint nemo, aliquam officia, quia magni deleniti est impedit quaerat ad quisquam exercitationem!</h2>
@@ -8,4 +8,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Services;
