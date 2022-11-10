@@ -33,10 +33,12 @@ const Header = () => {
             </ul>
           </div>
           <div className='flex'>
-          <Link to='/' className="btn btn-ghost normal-case text-xl">
+          <Link to='/'>
               <img className='h-12 mt-2' src={alogo} alt="" />
           </Link>
+          <Link to='/'>
           <h1 className='text-xl font-bold mt-3 py-2'>ANCIENT SHOT</h1>
+          </Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -55,7 +57,7 @@ const Header = () => {
             
             {
               user?.uid ?
-              <button onClick={handleSignOut} className="btn btn-outline text-orange-50 bg-orange-500 hover:bg-orange-50 hover:text-orange-500 hover:border-orange-500">Logout</button>
+              <button onClick={handleSignOut} className="btn btn-outline text-cyan-50 bg-cyan-500 hover:bg-cyan-50 hover:text-cyan-500 hover:border-cyan-500">Logout</button>
                       :
                       <Link to='/login' className=""><button className="btn btn-outline mx-2 text-cyan-500 hover:bg-cyan-500 hover:text-cyan-50 hover:border-cyan-500">Login</button></Link>
             }

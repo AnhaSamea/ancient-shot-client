@@ -10,7 +10,7 @@ const Services = () => {
     },[])
     return (
         <div className='text-center '>
-           <p className='text-xl font-bold  py-2 text-cyan-500'>Service</p>
+           {/* <p className='text-xl font-bold  py-2 text-cyan-500'>Service</p> */}
             <h1 className='text-5xl font-bold py-2'>Rare Historical Photos</h1>
             <div className='py-3'>
             <p className=' '>You’re free to share my blog or my articles. 
