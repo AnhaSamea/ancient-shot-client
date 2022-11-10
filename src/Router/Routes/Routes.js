@@ -3,6 +3,7 @@ import Main from "../../Layout/Main";
 import Checkout from "../../Pages/Checkout/Checkout";
 import Error from "../../Pages/Error/Error";
 import About from "../../Pages/Home/About/About";
+import Contact from "../../Pages/Home/Contact/Contact";
 import Home from "../../Pages/Home/Home/Home"
 import Services from "../../Pages/Home/Services/Services";
 import Login from "../../Pages/Login/Login";
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
             },
             
         ]
