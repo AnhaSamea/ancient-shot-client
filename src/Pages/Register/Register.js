@@ -59,11 +59,11 @@ const Register = () => {
                
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-orange-500 text-orange-50 border-orange-500" type='submit'>Register </button>
+                <button className="btn bg-cyan-500 text-cyan-50 border-cyan-500" type='submit'>Register </button>
                 <p className='text-center p-3'>Or, Register with</p>
                 <button onClick={handleGoogleSignIn} className="btn btn-ghost my-3"><FcGoogle className='h-8 w-6'></FcGoogle> <span className='ml-2'>Google</span></button>
               </div>
-              <p className='p-5'>Already have an accout? Then <Link to='/login' className='text-orange-500 '>Login</Link></p>
+              <p className='p-5'>Already have an accout? Then <Link to='/login' className='text-cyan-500 '>Login</Link></p>
             </form>
           </div>
           

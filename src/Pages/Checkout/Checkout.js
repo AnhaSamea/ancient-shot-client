@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import Reviews from '../Reviews/Reviews';
 
 const Checkout = () => {
     const service = useLoaderData();
@@ -62,6 +63,9 @@ const Checkout = () => {
             <p className='text-start text-slate-500'>{service.facility[3].details}</p>           
         </div>
         </div>
+    </div>
+    <div>
+        <Reviews></Reviews>
     </div>
 </div>
     );
