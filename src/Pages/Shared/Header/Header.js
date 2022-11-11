@@ -21,6 +21,12 @@ const Header = () => {
         {/* <Link to='/login'>Login</Link> */}
     </li>
     </>
+    const reviewItems = <>
+    <li>
+        <Link to='/addservice'>Add service</Link>
+        <Link to='/myreviews'>My reviews</Link>
+    </li>
+    </>
     return (
         <div className="navbar bg-base-100 pt-4">
         <div className="navbar-start">
@@ -48,16 +54,24 @@ const Header = () => {
         </div>
         <div className="navbar-end">
           
-        <div>
-        {
-            user?.photoURL && <img className='rounded-full w-8 h-8 flex' src={user.photoURL} alt="" /> 
-        }
-          </div>
+        
           <div>
             
             {
               user?.uid ?
-              <button onClick={handleSignOut} className="btn btn-outline text-cyan-50 bg-cyan-500 hover:bg-cyan-50 hover:text-cyan-500 hover:border-cyan-500">Logout</button>
+              <div className='flex justify-between'>
+            <div>
+          <ul className="menu menu-horizontal p-0 font-semibold">
+          {reviewItems}
+          </ul>
+        </div>
+        <div>
+        {
+            user?.photoURL && <img className='rounded-full w-8 h-8 flex mt-2' src={user.photoURL} alt="" /> 
+        }
+          </div>
+                <button onClick={handleSignOut} className="btn btn-outline text-cyan-50 bg-cyan-500 hover:bg-cyan-50 hover:text-cyan-500 hover:border-cyan-500">Logout</button>
+              </div>
                       :
                       <Link to='/login' className=""><button className="btn btn-outline mx-2 text-cyan-500 hover:bg-cyan-500 hover:text-cyan-50 hover:border-cyan-500">Login</button></Link>
             }
