@@ -48,10 +48,10 @@ const Header = () => {
         </div>
         <div className="navbar-end">
           
-          <div>
-          {
-               user?.photoURL && <img className='rounded-full w-8 h-8 flex' src={user.photoURL} alt="" /> 
-            }
+        <div>
+        {
+            user?.photoURL && <img className='rounded-full w-8 h-8 flex' src={user.photoURL} alt="" /> 
+        }
           </div>
           <div>
             

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
+
 const ServiceCard = ({service}) => {
     const {title,img,price,description,_id} = service;
     return (

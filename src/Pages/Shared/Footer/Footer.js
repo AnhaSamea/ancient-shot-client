@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import alogo from '../../../assets/logo1.png'
 const Footer = () => {
     return (
-        <footer className="footer footer-center p-10  text-slate-900 mt-6">
+        <footer className="footer footer-center pt-10 pb-4  text-slate-900 mt-6">
         <div>
             <img className='h-8' src={alogo} alt="" />
           <p className="font-bold">

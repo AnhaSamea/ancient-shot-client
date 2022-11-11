@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { Link} from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc'
 
 const Register = () => {
-
-    const{createUser} = useContext(AuthContext);
+ 
+    const{createUser,signInWithGoogle} = useContext(AuthContext);
 
     const handleRegister= event=>{
         event.preventDefault();
@@ -23,7 +24,14 @@ const Register = () => {
         .catch(err=>console.error(err))
     }
     
-
+    const handleGoogleSignIn = ()=>{
+      signInWithGoogle()
+      .then(res=>{
+          const user = res.user;
+          console.log(user);
+      })
+      .catch(error=>console.log(error));
+  }
     return (
         <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -53,7 +61,7 @@ const Register = () => {
               <div className="form-control mt-6">
                 <button className="btn bg-orange-500 text-orange-50 border-orange-500" type='submit'>Register </button>
                 <p className='text-center p-3'>Or, Register with</p>
-                {/* <button onClick={handleGoogleSignIn} className="btn btn-ghost my-3"><FcGoogle className='h-8 w-6'></FcGoogle> <span className='ml-2'>Google</span></button> */}
+                <button onClick={handleGoogleSignIn} className="btn btn-ghost my-3"><FcGoogle className='h-8 w-6'></FcGoogle> <span className='ml-2'>Google</span></button>
               </div>
               <p className='p-5'>Already have an accout? Then <Link to='/login' className='text-orange-500 '>Login</Link></p>
             </form>

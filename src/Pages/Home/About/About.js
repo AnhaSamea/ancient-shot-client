@@ -1,5 +1,8 @@
 import React from 'react';
 import img from './Britain-in-the-roaring-twenties-7.jpg'
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
+
 const About = () => {
     return (
 
@@ -12,7 +15,11 @@ const About = () => {
                     </p>
 
                     <div className='w-full'>
-                        <img src={img} className="w-full h-full rounded-lg shadow-2xl" alt='' />
+                        <PhotoProvider>
+                            <PhotoView src={img}>
+                            <img src={img} className="w-full h-full rounded-lg shadow-2xl" alt='' />
+                            </PhotoView>
+                        </PhotoProvider>
 
                     </div>
                 </div>
