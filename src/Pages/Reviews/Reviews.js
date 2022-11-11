@@ -41,14 +41,14 @@ const Reviews = () => {
     }
     return (
         <div>
-            <h1 className='text-center text-3xl font-bold py-5'>Add your review</h1>
+            <h1 className='text-center text-3xl font-bold py-5 text-cyan-500'>Add your review</h1>
             <form onSubmit={handlePostReview} className='flex justify-center '>
             <div className="form-control w-full max-w-xs shadow-xl rounded-lg p-8">
                 <label className="label">
                     <span className="label-text">Your Name</span>
 
                 </label>
-                <input type="text" name='name' placeholder="Name" className="input input-bordered w-full max-w-xs" defaultValue={user?.name} required/>
+                <input type="text" name='name' placeholder="Name" className="input input-bordered w-full max-w-xs" required/>
                 <label className="label">
                     <span className="label-text">Your Email</span>
 

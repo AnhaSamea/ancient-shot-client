@@ -4,6 +4,7 @@ import AllReviews from "../../Pages/AllReviews/AllReviews";
 import Checkout from "../../Pages/Checkout/Checkout";
 import Error from "../../Pages/Error/Error";
 import About from "../../Pages/Home/About/About";
+import Blog from "../../Pages/Home/Blog/Blog";
 import Contact from "../../Pages/Home/Contact/Contact";
 import Home from "../../Pages/Home/Home/Home"
 import AllService from "../../Pages/Home/Services/AllService";
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
             {
                 path: '/reviews',
                 element: <AllReviews></AllReviews>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             },
             
         ]

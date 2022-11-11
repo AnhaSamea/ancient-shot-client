@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import Reviews from '../Reviews/Reviews';
+import CheckoutReview from '../CheckoutReview/CheckoutReview';
 
 const Checkout = () => {
     const service = useLoaderData();
@@ -65,8 +66,12 @@ const Checkout = () => {
         </div>
     </div>
     <div>
+        <CheckoutReview></CheckoutReview>
+    </div>
+    <div>
         <Reviews></Reviews>
     </div>
+
 </div>
     );
 };
