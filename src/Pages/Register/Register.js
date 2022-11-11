@@ -2,11 +2,16 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { Link} from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc'
+import Spinner from '../../Router/PrivateRoute/Spinner/Spinner';
 
 const Register = () => {
  
-    const{createUser,signInWithGoogle} = useContext(AuthContext);
+    const{loading,createUser,signInWithGoogle} = useContext(AuthContext);
+    if(loading){
+      console.log('loading found');
+      return <Spinner></Spinner>
 
+  }
     const handleRegister= event=>{
         event.preventDefault();
         const form = event.target;

@@ -2,14 +2,19 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc'
+import Spinner from '../../Router/PrivateRoute/Spinner/Spinner';
 
 const Login = () => {
 
-    const {signIn,signInWithGoogle} = useContext(AuthContext);
+    const {loading,signIn,signInWithGoogle} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+    if(loading){
+      console.log('loading found');
+      return <Spinner></Spinner>
 
+  }
 
     const handleSubmit= event=>{
         event.preventDefault();
