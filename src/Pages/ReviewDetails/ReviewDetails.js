@@ -7,7 +7,7 @@ const ReviewDetails = ({review}) => {
     return (
         <div>
 <div className="overflow-x-auto w-full">
-  <table className="table w-full my-8 shadow-2xl">
+  <table className="table w-full my-8 shadow-xl">
   
     <thead>
       <tr>
