@@ -5,6 +5,7 @@ import Error from "../../Pages/Error/Error";
 import About from "../../Pages/Home/About/About";
 import Contact from "../../Pages/Home/Contact/Contact";
 import Home from "../../Pages/Home/Home/Home"
+import AllService from "../../Pages/Home/Services/AllService";
 import Services from "../../Pages/Home/Services/Services";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/services',
-                element: <Services></Services>
+                element: <AllService></AllService>
             },
             {
                 path:'/services/:id',

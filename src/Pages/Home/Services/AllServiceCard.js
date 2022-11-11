@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { Link } from 'react-router-dom';
 
-
-const ServiceCard = ({service}) => {
-    const {title,img,price,description,_id} = service;
+const AllServiceCard = ({allService}) => {
+    const {title,img,price,description,_id} = allService;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
         
@@ -30,4 +29,4 @@ const ServiceCard = ({service}) => {
     );
 };
 
-export default ServiceCard;
+export default AllServiceCard;
