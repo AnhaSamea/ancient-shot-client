@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
-import { Link} from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc'
 
 const Login = () => {
- 
+
     const {signIn,signInWithGoogle} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
 
     const handleSubmit= event=>{
         event.preventDefault();
@@ -21,7 +25,7 @@ const Login = () => {
             console.log(user);
             form.reset();
             // setError('');
-            // navigate(from, {replace:true})
+            navigate(from, {replace:true})
             // navigate('/')
         })
         .catch(err=>{
@@ -36,7 +40,7 @@ const Login = () => {
       .then(res=>{
           const user = res.user;
           console.log(user);
-          // navigate(from, {replace:true})
+          navigate(from, {replace:true})
       })
       .catch(error=>console.log(error));
   }
@@ -61,13 +65,13 @@ const Login = () => {
                
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-orange-500 text-orange-50 border-orange-500" type='submit'>Login</button>
+                <button className="btn bg-cyan-500 text-cyan-50 border-cyan-500" type='submit'>Login</button>
                 {/* <p className='text-red-600'>{error}</p> */}
                 <p className='text-center p-3'>Or, Login with</p>
                 <button onClick={handleGoogleSignIn} className="btn btn-ghost my-3"><FcGoogle className='h-8 w-6'></FcGoogle> <span className='ml-2'>Google</span></button>
                 
               </div>
-              <p className='p-5'>Don't have an accout? Then <Link to='/register' className='text-orange-500 '>Register</Link></p>
+              <p className='p-5'>Don't have an accout? Then <Link to='/register' className='text-cyan-500 '>Register</Link></p>
             </form>
          
           </div>
